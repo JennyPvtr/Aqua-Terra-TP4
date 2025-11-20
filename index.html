@@ -1,2 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
 
-nhjhuguihihihjjhuhuhjgh
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie Lumière</title>
+    <link rel="stylesheet" href="css/accueil.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section class="main">
+        <header>
+            <nav class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="html/galerie.html">Galerie</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+        </header>
+
+        <div class="main-title">
+        </div>
+    </section>
+
+    <section class="storytelling">
+        <div class="container">
+            <div class="story-text">
+                <h2>STORYTELLING</h2>
+                <p class="quote" id="quote">L'art est le miroir de l'âme, ou l'eau révèle l'émotion cachée.</p>
+                <p class="description">
+                    Il y a des lieux qui se visitent, et d’autres qui se ressentent. Aqua Terra est né de cette
+                    intuition, celle que l’eau n’est pas seulement un élément, mais une langue universelle. Elle
+                    reflète, apaise, bouscule. Elle sait lire ce que nous taisons, là où l’eau dialogue avec la terre,
+                    l’art et les âmes. Car comme la terre porte la vie, l’humain porte ses émotions, parfois enfouies,
+                    parfois intenses. Ici, l’eau s’enracine dans la matière, comme le cœur dans la chair. Elle
+                    s’infiltre, nourrit, transforme. Elle devient matière d’art et matière d’être. <br><br> Chaque œuvre
+                    est une onde, chaque salle, un battement, chaque visiteur, un miroir.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="duo-sections">
+        <div class="container duo-container">
+            <div class="duo-row first">
+                <div class="duo-text">
+                    <h2>Glace Eternelle</h2>
+                    <p>Quand la beauté se fige, le temps se tait et l’âme se reflète dans le silence du froid.</p>
+                    <a href="html/Description.html" class="btn">Entrer</a>
+                </div>
+                <div class="duo-image">
+                    <img src="images/1.webp" alt="Glace Eternelle">
+                </div>
+            </div>
+            <div class="duo-row">
+                <div class="duo-image">
+                    <img src="images/2.webp" alt="L’Eau en Terre Inconnue">
+                </div>
+                <div class="duo-text">
+                    <h2>L’Eau en Terre Inconnue</h2>
+                    <p>Là où l’eau s’enracine dans la terre comme l’âme dans le corps.</p>
+                    <a href="html/description2.html" class="btn">Entrer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-bar"></section>
+
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2 class="contact-title">Contact</h2>
+            <div class="contact-info">
+                <p><strong>AQUA TERRA</strong></p>
+                <p>Adresse : 6 avenue Jean-Médecin<br>06000 Nice<br>France</p>
+                <p>+33 (0)4 97 17 20 70</p>
+                <p>galerie@aquaterranice.com</p>
+                <p>Chiffre d'affaires : 1 200 000 € / an</p>
+                <p>Nombre de salariés : 4 personnes</p>
+                <p>Personne à contacter dans l'entreprise : Gabriela Tores</p>
+                <p>La galerie est ouverte du lundi au vendredi de 14h à 18h30 et sur rendez-vous.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="signup">
+
+        <div class="signup-container">
+            <h2 class="signup-title">Nous Contacter</h2>
+            <form id="signupForm" onsubmit="return validateForm()">
+                <input type="text" name="prenom" placeholder="Prénom" required>
+                <BR>
+                <input type="text" name="nom" placeholder="Nom" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <button type="submit" class="btn">Envoyer </button>
+            </form>
+        </div>
+    </section>
+
+    <section class="contact-bar"></section>
+
+    <section class="info-section">
+        <div class="info-container">
+            <div class="info-left">
+                <h2 class="info-title">Namedly</h2>
+                <p class="info-description">Descriptive line about what your company does.</p>
+                <div class="social-logos">
+                    <img src="images/logo-facebook.png" alt="Facebook">
+                    <img src="images/logo-twitter.png" alt="Twitter">
+                    <img src="images/logo-linkedin.png" alt="LinkedIn">
+                </div>
+            </div>
+            <div class="info-right">
+                <div class="info-column">
+                    <h3>Feature</h3>
+                    <ul>
+                        <li>Core features</li>
+                        <li>Pro Experience</li>
+                        <li>Integrations</li>
+                    </ul>
+                </div>
+                <div class="info-column">
+                    <h3>Learn More</h3>
+                    <ul>
+                        <li>Blog</li>
+                        <li>Case Studies</li>
+                        <li>Customer Stories</li>
+                        <li>Best Practices</li>
+                    </ul>
+                </div>
+                <div class="info-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li>Contact</li>
+                        <li>Support</li>
+                        <li>Legal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function validateForm() {
+            const form = document.getElementById("signupForm");
+            const email = form.email.value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Veuillez entrer un email valide.");
+                return false;
+            }
+            alert("Merci pour votre inscription !");
+            form.reset();
+            return false;
+        }
+    </script>
+</body>
+
+</html>
