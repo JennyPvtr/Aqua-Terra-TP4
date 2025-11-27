@@ -144,4 +144,21 @@
         </div>
     </section>
 
+    <script>
+        function validateForm() {
+            const form = document.getElementById("signupForm");
+            const email = form.email.value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Veuillez entrer un email valide.");
+                return false;
+            }
+            alert("Merci pour votre inscription !");
+            form.reset();
+            return false;
+        }
+    </script>
+</body>
+
+</html>
     
